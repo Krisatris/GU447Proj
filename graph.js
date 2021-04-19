@@ -39,6 +39,7 @@ class Graph {
     addEdge(source, destination, weight) {
         if(source < this.vertexNum && destination < this.vertexNum) {
             this.adjacencyList[source].insertAtHead(destination, weight);
+            this.adjacencyList[destination].insertAtHead(source, weight);
             ++this.edgeNum;
         }
     }
@@ -59,6 +60,13 @@ class Graph {
         while(temp != null) {
             if(temp.destination == destination) {
                 temp.weight = weight;
+            }
+            temp = temp.next;
+        }
+        temp = this.adjacencyList[destination].head;
+        while(temp != null) {
+            if(temp.destination == source) {
+                temp.weight = weight;
                 return true;
             }
             temp = temp.next;
@@ -73,6 +81,19 @@ class Graph {
             if(temp.destination == destination) {
                 if(temp == this.adjacencyList[source].head) {
                     this.adjacencyList[source].head = temp.next;
+                } else {
+                    prev.next = temp.next;
+                }
+            }
+            prev = temp;
+            temp = temp.next;
+        }
+        temp = this.adjacencyList[destination].head;
+        prev = temp;
+        while(temp != null) {
+            if(temp.destination == source) {
+                if(temp == this.adjacencyList[destination].head) {
+                    this.adjacencyList[destination].head = temp.next;
                     --this.edgeNum;
                     return true;
                 } else {
@@ -125,6 +146,14 @@ class Graph {
         return path;
     }
 };
+
+let g1 = new Graph(4);
+console.log(g1.addEdge(0, 1, 1));
+console.log(g1.addEdge(1, 2, 1));
+console.log(g1.addEdge(2, 3, 1));
+console.log(g1.addEdge(3, 0, 1));
+console.log(g1.updateEdge(0, 1, 2));
+console.log(g1.removeEdge(2, 3));
 
 let g = new Graph(6);
 g.addEdge(0, 1, 1);
