@@ -28,6 +28,7 @@ class Graph {
 
     constructor(vertexNum) {
         this.vertexNum = vertexNum;
+        this.edgeNum = 0;
         this.adjacencyList = [];
         for(let i = 0; i < vertexNum; ++i) {
             let temp = new LinkedList();
@@ -38,6 +39,7 @@ class Graph {
     addEdge(source, destination, weight) {
         if(source < this.vertexNum && destination < this.vertexNum) {
             this.adjacencyList[source].insertAtHead(destination, weight);
+            ++this.edgeNum;
         }
     }
 
@@ -71,20 +73,33 @@ class Graph {
             if(temp.destination == destination) {
                 if(temp == head) {
                     head = temp.next;
+                    --this.edgeNum;
+                    return true;
                 } else {
                     prev.next = temp.next;
+                    --this.edgeNum;
+                    return true;
                 }
             }
             prev = temp;
             temp = temp.next;
         }
+        return false;
+    }
+
+    dijkstra(source) {
+
     }
 };
 
 let g = new Graph(3);
-console.log(g.addEdge(0, 1, 1));
+g.addEdge(0, 1, 1);
 g.addEdge(0, 2, 2);
 g.addEdge(2, 1, 0);
 console.log(g.updateEdge(2, 1, 3));
 console.log(g.getEdge(2, 1));
+console.log(g.adjacencyList[2].head);
 console.log(g.updateEdge(1, 2, 0));
+console.log(g.getEdge(0, 1));
+console.log(g.adjacencyList[1].head);
+console.log(g.removeEdge(0, 1));
