@@ -1,7 +1,9 @@
 <template>
     <div class="home">
-        <h1>{{ msg }}</h1>
-        <p>Welcome to your new single-page application, built with <a href="https://vuejs.org" target="_blank">Vue.js</a>.</p>
+        <svg height="100" width="100">
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="25" y="25">2</text>
+            <circle cx="50" cy="50" r="50" />
+        </svg>
     </div>
 </template>
 
