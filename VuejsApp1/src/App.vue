@@ -130,9 +130,9 @@
 
 <script>
     import Home from './components/Home.vue';
-    import PathComponent from './components/PathComponent.vue';
-    import Node from './components/Node.vue';
-    import * as test from '../src/graph.js';
+    //import PathComponent from './components/PathComponent.vue';
+    //import Node from './components/Node.vue';
+    import { Graph, LinkedList, Node } from '../src/testGraph.js';
 
     //var graph = require('../src/graph.js');
 
@@ -140,12 +140,12 @@
         name: 'app',
         components: {
             Home,
-            PathComponent,
-            Node
+            //PathComponent,
+            //Node
         },
         data() {
             return {
-                //graph: new Graph(),
+                graph: new Graph(13),
                 id1: 1,
                 source: -1,
                 dest: -1,

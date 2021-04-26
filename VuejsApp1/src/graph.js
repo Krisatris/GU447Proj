@@ -4,7 +4,7 @@
 */
 
 
-class Node {
+export class Node {
     constructor(destination, weight) {
         this.destination = destination;
         this.weight = weight;
@@ -12,7 +12,7 @@ class Node {
     }
 };
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head = null;
     }
@@ -25,7 +25,7 @@ class LinkedList {
     }
 };
 
-class Graph {
+export default class Graph {
 
     constructor(vertexNum) {
         this.vertexNum = vertexNum;
@@ -146,7 +146,7 @@ class Graph {
 
         return path;
     }
-}
+};
 
 //export { Graph };
 
