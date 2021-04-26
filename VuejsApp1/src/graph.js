@@ -3,7 +3,8 @@
     based on an adjacency list graph representation
 */
 
-class Node {
+
+export class Node {
     constructor(destination, weight) {
         this.destination = destination;
         this.weight = weight;
@@ -11,7 +12,7 @@ class Node {
     }
 };
 
-class LinkedList {
+export class LinkedList {
     constructor() {
         this.head = null;
     }
@@ -23,6 +24,7 @@ class LinkedList {
         return this;
     }
 };
+
 
 class Graph {
 
@@ -114,7 +116,7 @@ class Graph {
         let path = [];
         for(let i = 0; i < this.vertexNum; ++i) {
             discovered.push(false);
-            path_costs.push(Number.MAX_SAFE_INTEGER);
+            //path_costs.push(Number.MAX_SAFE_INTEGER);
             path.push(null);
         }
         discovered[source] = true;
@@ -147,6 +149,17 @@ class Graph {
     }
 };
 
+export { Graph };
+
+/*
+export default {
+    test() {
+        console.log("testing importing");
+    }
+} */
+
+
+/*
 let g1 = new Graph(4);
 console.log(g1.addEdge(0, 1, 1));
 console.log(g1.addEdge(1, 2, 1));
@@ -167,3 +180,4 @@ g.addEdge(0, 3, 1);
 g.addEdge(1, 4, 2);
 let path = g.dijkstra(0);
 console.log(path);
+*/
