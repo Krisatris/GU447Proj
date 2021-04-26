@@ -40,8 +40,8 @@ export class Graph {
 
 function addEdge(graph, source, destination, weight) {
     if (source < graph.vertexNum && destination < graph.vertexNum) {
-        graph.adjacencyList[source].insertAtHead(destination, weight);
-        graph.adjacencyList[destination].insertAtHead(source, weight);
+        insertAtHead(graph.adjacencyList[source], destination, weight);
+        insertAtHead(graph.adjacencyList[destination], source, weight);
         ++graph.edgeNum;
     }
 }
