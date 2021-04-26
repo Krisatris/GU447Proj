@@ -25,7 +25,6 @@ class LinkedList {
     }
 };
 
-
 class Graph {
 
     constructor(vertexNum) {
@@ -116,7 +115,6 @@ class Graph {
         let path = [];
         for(let i = 0; i < this.vertexNum; ++i) {
             discovered.push(false);
-            //path_costs.push(Number.MAX_SAFE_INTEGER);
             path.push(null);
         }
         discovered[source] = true;

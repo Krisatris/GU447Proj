@@ -130,9 +130,8 @@
 
 <script>
     import Home from './components/Home.vue';
-    import PathComponent from './components/PathComponent.vue';
-    import Node from './components/Node.vue';
-    import * as test from '../src/graph.js';
+    //import { Graph } from '../src/graph.js';
+    import LinkedList  from '../src/main - Copy';
 
     //var graph = require('../src/graph.js');
 
@@ -146,6 +145,8 @@
         data() {
             return {
                 //graph: new Graph(),
+                //node: new node_class(),
+                list: new LinkedList(),
                 id1: 1,
                 source: -1,
                 dest: -1,
