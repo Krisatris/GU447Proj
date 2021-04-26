@@ -38,7 +38,7 @@ export class Graph {
     }
 }
 
-function addEdge(graph, source, destination, weight) {
+export function addEdge(graph, source, destination, weight) {
     if (source < graph.vertexNum && destination < graph.vertexNum) {
         insertAtHead(graph.adjacencyList[source], destination, weight);
         insertAtHead(graph.adjacencyList[destination], source, weight);
@@ -110,7 +110,7 @@ function removeEdge(graph, source, destination) {
     return false;
 }
 
-function dijkstra(graph, source) {
+export function dijkstra(graph, source) {
     let discovered = [];
     let path_costs = [];
     let path = [];

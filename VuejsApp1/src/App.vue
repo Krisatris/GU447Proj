@@ -132,7 +132,7 @@
     import Home from './components/Home.vue';
     //import PathComponent from './components/PathComponent.vue';
     //import Node from './components/Node.vue';
-    import { Graph, LinkedList, Node } from '../src/testGraph.js';
+    import { Graph, LinkedList, Node, dijkstra, addEdge } from '../src/testGraph.js';
 
     //var graph = require('../src/graph.js');
 
@@ -146,6 +146,8 @@
         data() {
             return {
                 graph: new Graph(13),
+                list: new LinkedList(),
+                node: new Node(),
                 id1: 1,
                 source: -1,
                 dest: -1,
@@ -167,6 +169,7 @@
                 this.render_route();
             },
             set_route(element) {
+                this.test_graph();
                 /* eslint-disable no-console */
                 console.log("setting route" + element.currentTarget.id);
                 if (!this.have_route) {
@@ -189,6 +192,19 @@
             render_route: function () {
                 /* eslint-disable no-console */
                 console.log("route");
+            },
+            test_graph() {
+                addEdge(this.graph, 0, 1, 1);
+                addEdge(this.graph, 1, 2, 1);
+                addEdge(this.graph, 2, 3, 1);
+                addEdge(this.graph, 3, 4, 1);
+                addEdge(this.graph, 4, 5, 1);
+                addEdge(this.graph, 5, 6, 1);
+                addEdge(this.graph, 0, 2, 2);
+                addEdge(this.graph, 0, 3, 1);
+                addEdge(this.graph, 1, 4, 2);
+                let path = dijkstra(this.graph, 0);
+                console.log(path);
             }
         }
     };
