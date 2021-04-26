@@ -128,8 +128,8 @@ export function dijkstra(graph, source) {
         min_dist = -1;
         for (let u = 0; u < graph.vertexNum; ++u) {
             for (let v = 0; v < graph.vertexNum; ++v) {
-                if (discovered[u] && !discovered[v] && graph.getEdge(u, v) != -1) {
-                    weight = graph.getEdge(u, v);
+                if (discovered[u] && !discovered[v] && getEdge(graph, u, v) != -1) {
+                    weight = getEdge(graph, u, v);
                     if (min_dist > (path_costs[u] + weight) || min_dist == -1) {
                         u_p = u;
                         v_p = v;
