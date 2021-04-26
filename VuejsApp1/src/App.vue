@@ -1,9 +1,5 @@
 <template>
     <div id="app">
-        <!--
-    <PathComponent v-bind:x1="10" v-bind:y1="30" v-bind:x2="10" v-bind:y2="90" weight="7"></PathComponent>
-    <PathComponent v-bind:x1="10" v-bind:y1="30" v-bind:x2="140" v-bind:y2="30" weight="7"></PathComponent>
-        -->
 
         <svg height="1000" width="1000">
             <!--lines-->
@@ -107,8 +103,8 @@
             <circle cx="500" cy="225" r="25" fill="#aeaeae" />
             <text fill="#white" font-size="20" font-family="Verdana" x="500" y="225" text-anchor="middle" dy=".3em">9</text>
 
-            <circle cx="200" cy="325" r="25" fill="#aeaeae" />
-            <text fill="#white" font-size="20" font-family="Verdana" x="200" y="325" text-anchor="middle" dy=".3em">2</text>
+            <circle id="2" cx="200" cy="325" r="25" fill="#aeaeae" @click="set_route($event)" />
+            <text id="2" fill="#white" font-size="20" font-family="Verdana" x="200" y="325" text-anchor="middle" dy=".3em" @click="set_route($event)">2</text>
 
             <circle cx="300" cy="325" r="25" fill="#aeaeae" />
             <text fill="#white" font-size="20" font-family="Verdana" x="300" y="325" text-anchor="middle" dy=".3em">3</text>
@@ -116,10 +112,19 @@
             <circle cx="400" cy="325" r="25" fill="#aeaeae" />
             <text fill="#white" font-size="20" font-family="Verdana" x="400" y="325" text-anchor="middle" dy=".3em">4</text>
 
-            <circle cx="300" cy="425" r="25" fill="#aeaeae" />
-            <text fill="#white" font-size="20" font-family="Verdana" x="300" y="425" text-anchor="middle" dy=".3em">1</text>
-
+            <circle id="1" cx="300" cy="425" r="25" fill="#aeaeae" @click="set_route($event)"/>
+            <text id="1" fill="#white" font-size="20" font-family="Verdana" x="300" y="425" text-anchor="middle" dy=".3em" @click="set_route($event)">1</text>
         </svg>
+
+
+            <div @click="set_route" >
+                <svg  height="1000" width="1000">
+                    <circle id="1" cx="300" cy="425" r="25" fill="#aeaeae" />
+                    <text fill="#white" font-size="20" font-family="Verdana" x="300" y="425" text-anchor="middle" dy=".3em" @click="set_route">1</text>
+                </svg>
+                
+            </div>
+            
     </div>
 </template>
 
@@ -127,6 +132,9 @@
     import Home from './components/Home.vue';
     import PathComponent from './components/PathComponent.vue';
     import Node from './components/Node.vue';
+    import * as test from '../src/graph.js';
+
+    //var graph = require('../src/graph.js');
 
     export default {
         name: 'app',
@@ -134,6 +142,54 @@
             Home,
             PathComponent,
             Node
+        },
+        data() {
+            return {
+                //graph: new Graph(),
+                id1: 1,
+                source: -1,
+                dest: -1,
+                have_route: false,
+                have_source: false,
+                have_dest: false,
+                paths: [],
+                route_path: [],
+            }
+        },
+        methods: {
+            set_up_graph: function () {
+                //Graph.init_graph();
+            },
+            get_route: function () {
+                //paths = Graph.dijkstra(source);
+                this.route_path = this.paths[this.dest];
+                this.have_route = true;
+                this.render_route();
+            },
+            set_route(element) {
+                /* eslint-disable no-console */
+                console.log("setting route" + element.currentTarget.id);
+                if (!this.have_route) {
+                    if (!this.have_source) {
+                        this.source = element.currentTarget.id;
+                        this.have_source = true;
+                        console.log("source is " + this.source);
+                    } else {
+                        if (!this.have_dest) {
+                            this.dest = element.currentTarget.id;
+                            this.have_dest = true;
+                            console.log("dest is " + this.dest);
+                        }
+                    }
+                    if (this.have_source && this.have_dest) {
+                        this.get_route();
+                    }
+                }
+            },
+            render_route: function () {
+                /* eslint-disable no-console */
+                console.log("route");
+            }
         }
     };
 </script>
