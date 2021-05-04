@@ -230,8 +230,12 @@
             render_route: function () {
                 /* eslint-disable no-console */
                 console.log("route");
-                for (let i = this.route_path.length-1; i > 0; --i) {
-                    let id = "" + this.route_path[i] + "-" + this.route_path[i - 1];
+                for (let i = this.route_path.length - 1; i > 0; --i) {
+                    let id;
+                    if(this.route_path[i]<this.route_path[i-1])
+                        id = "" + this.route_path[i] + "-" + this.route_path[i - 1];
+                    else
+                        id = "" + this.route_path[i-1] + "-" + this.route_path[i];
                     console.log("painting path " + id);
                     let index = this.line_ids.indexOf(id);
                     console.log(index);
