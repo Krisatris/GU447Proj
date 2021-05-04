@@ -3,80 +3,80 @@
         
         <h1>Group Four's Routing Project</h1>
 
-        <svg height="1000" width="1000">
+        <svg height="600" width="1000">
 
             <!--lines-->
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="120" text-anchor="middle">8</text>
-            <line id="9-10" x1="200" y1="125" x2="300" y2="125" :class="get_line(19) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="120" @click="show_update($event)" text-anchor="middle">{{this.line_weights[19]}}</text>
+            <line id="9-10" x1="200" y1="125" x2="300" y2="125" :class="get_line(19) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="120" text-anchor="middle">8</text>
-            <line id="10-11-" x1="300" y1="125" x2="400" y2="125" :class="get_line(20) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="120" @click="show_update($event)" text-anchor="middle">{{this.line_weights[20]}}</text>
+            <line id="10-11-" x1="300" y1="125" x2="400" y2="125" :class="get_line(20) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="220" text-anchor="middle">10</text>
-            <line id="5-6" x1="200" y1="225" x2="300" y2="225" :class="get_line(11) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="220" @click="show_update($event)" text-anchor="middle">{{this.line_weights[11]}}</text>
+            <line id="5-6" x1="200" y1="225" x2="300" y2="225" :class="get_line(11) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="150" y="220" text-anchor="middle">12</text>
-            <line id="4-5" x1="100" y1="225" x2="200" y2="225" :class="get_line(10) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="150" y="220" @click="show_update($event)" text-anchor="middle">{{this.line_weights[10]}}</text>
+            <line id="4-5" x1="100" y1="225" x2="200" y2="225" :class="get_line(10) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="220" text-anchor="middle">13</text>
-            <line id="6-7" x1="300" y1="225" x2="400" y2="225" :class="get_line(12) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="220" @click="show_update($event)" text-anchor="middle">{{this.line_weights[12]}}</text>
+            <line id="6-7" x1="300" y1="225" x2="400" y2="225" :class="get_line(12) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="220" text-anchor="middle">4</text>
-            <line id="7-8" x1="400" y1="225" x2="500" y2="225" :class="get_line(13) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="220" @click="show_update($event)" text-anchor="middle">{{this.line_weights[13]}}</text>
+            <line id="7-8" x1="400" y1="225" x2="500" y2="225" :class="get_line(13) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="320" text-anchor="middle">9</text>
-            <line id="1-2" x1="200" y1="325" x2="300" y2="325" :class="get_line(3) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="320" @click="show_update($event)" text-anchor="middle">{{this.line_weights[3]}}</text>
+            <line id="1-2" x1="200" y1="325" x2="300" y2="325" :class="get_line(3) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="320" text-anchor="middle">13</text>
-            <line id="2-3" x1="300" y1="325" x2="400" y2="325" :class="get_line(4) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="320" @click="show_update($event)" text-anchor="middle">{{this.line_weights[4]}}</text>
+            <line id="2-3" x1="300" y1="325" x2="400" y2="325" :class="get_line(4) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="80" text-anchor="middle">3</text>
-            <line id="10-12" x1="300" y1="25" x2="300" y2="125" :class="get_line(22) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="80" @click="show_update($event)" text-anchor="middle">{{this.line_weights[22]}}</text>
+            <line id="10-12" x1="300" y1="25" x2="300" y2="125" :class="get_line(22) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="180" text-anchor="middle">2</text>
-            <line id="6-10" x1="300" y1="125" x2="300" y2="225" :class="get_line(16) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="180" @click="show_update($event)" text-anchor="middle">{{this.line_weights[16]}}</text>
+            <line id="6-10" x1="300" y1="125" x2="300" y2="225" :class="get_line(16) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="190" y="180" text-anchor="middle">13</text>
-            <line id="5-9" x1="200" y1="125" x2="200" y2="225" :class="get_line(14) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="190" y="180" @click="show_update($event)" text-anchor="middle">{{this.line_weights[14]}}</text>
+            <line id="5-9" x1="200" y1="125" x2="200" y2="225" :class="get_line(14) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="390" y="180" text-anchor="middle">7</text>
-            <line id="7-11" x1="400" y1="125" x2="400" y2="225" :class="get_line(17) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="390" y="180" @click="show_update($event)" text-anchor="middle">{{this.line_weights[17]}}</text>
+            <line id="7-11" x1="400" y1="125" x2="400" y2="225" :class="get_line(17) ? 'red' : 'black'" style="stroke-width:2"  @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="395" y="280" text-anchor="middle">4</text>
-            <line id="3-7" x1="400" y1="225" x2="400" y2="325" :class="get_line(8) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="395" y="280" @click="show_update($event)" text-anchor="middle">{{this.line_weights[8]}}</text>
+            <line id="3-7" x1="400" y1="225" x2="400" y2="325" :class="get_line(8) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="280" text-anchor="middle">13</text>
-            <line id="2-6" x1="300" y1="225" x2="300" y2="325" :class="get_line(7) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="280" @click="show_update($event)" text-anchor="middle">{{this.line_weights[7]}}</text>
+            <line id="2-6" x1="300" y1="225" x2="300" y2="325" :class="get_line(7) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="195" y="280" text-anchor="middle">6</text>
-            <line id="1-5" x1="200" y1="225" x2="200" y2="325" :class="get_line(6) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="195" y="280" @click="show_update($event)" text-anchor="middle">{{this.line_weights[6]}}</text>
+            <line id="1-5" x1="200" y1="225" x2="200" y2="325" :class="get_line(6) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="380" text-anchor="middle">15</text>
-            <line id="0-2" x1="300" y1="325" x2="300" y2="425" :class="get_line(1) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="380" @click="show_update($event)" text-anchor="middle">{{this.line_weights[1]}}</text>
+            <line id="0-2" x1="300" y1="325" x2="300" y2="425" :class="get_line(1) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="70" text-anchor="middle">10</text>
-            <line id="9-12" x1="300" y1="25" x2="200" y2="125" :class="get_line(21) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="70" @click="show_update($event)" text-anchor="middle">{{this.line_weights[21]}}</text>
+            <line id="9-12" x1="300" y1="25" x2="200" y2="125" :class="get_line(21) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="170" text-anchor="middle">10</text>
-            <line id="4-9" x1="200" y1="125" x2="100" y2="225" :class="get_line(14) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="170" @click="show_update($event)" text-anchor="middle">{{this.line_weights[14]}}</text>
+            <line id="4-9" x1="200" y1="125" x2="100" y2="225" :class="get_line(14) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="290" text-anchor="middle">2</text>
-            <line id="1-4" x1="100" y1="225" x2="200" y2="325" :class="get_line(5) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="290" @click="show_update($event)" text-anchor="middle">{{this.line_weights[5]}}</text>
+            <line id="1-4" x1="100" y1="225" x2="200" y2="325" :class="get_line(5) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="390" text-anchor="middle">11</text>
-            <line id="0-1" x1="200" y1="325" x2="300" y2="425" :class="get_line(0) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="390" @click="show_update($event)" text-anchor="middle">{{this.line_weights[0]}}</text>
+            <line id="0-1" x1="200" y1="325" x2="300" y2="425" :class="get_line(0) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="390" text-anchor="middle">14</text>
-            <line id="0-3" x1="300" y1="425" x2="400" y2="325" :class="get_line(2) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="390" @click="show_update($event)" text-anchor="middle">{{this.line_weights[2]}}</text>
+            <line id="0-3" x1="300" y1="425" x2="400" y2="325" :class="get_line(2) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="455" y="290" text-anchor="middle">3</text>
-            <line id="3-8" x1="400" y1="325" x2="500" y2="225" :class="get_line(9) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="455" y="290" @click="show_update($event)" text-anchor="middle">{{this.line_weights[9]}}</text>
+            <line id="3-8" x1="400" y1="325" x2="500" y2="225" :class="get_line(9) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="170" text-anchor="middle">4</text>
-            <line id="8-11" x1="500" y1="225" x2="400" y2="125" :class="get_line(18) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="170" @click="show_update($event)" text-anchor="middle">{{this.line_weights[18]}}</text>
+            <line id="8-11" x1="500" y1="225" x2="400" y2="125" :class="get_line(18) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="70" text-anchor="middle">13</text>
-            <line id="11-12" x1="400" y1="125" x2="300" y2="25" :class="get_line(23) ? 'red' : 'black'" style="stroke-width:2" />
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="70" @click="show_update($event)" text-anchor="middle">{{this.line_weights[23]}}</text>
+            <line id="11-12" x1="400" y1="125" x2="300" y2="25" :class="get_line(23) ? 'red' : 'black'" style="stroke-width:2" @click="show_update($event)" />
 
             <!--Nodes-->
             <circle id="12" cx="300" cy="25" r="25" fill="#aeaeae" @click="set_route($event)"/>
@@ -119,7 +119,13 @@
             <text id="0" fill="#white" font-size="20" font-family="Verdana" x="300" y="425" text-anchor="middle" dy=".3em" @click="set_route($event)">0</text>
         </svg>
 
-
+        <div>
+            <button type="button" :style="{visibility: show_update_info ? 'visible' : 'hidden'}">Remove edge</button>
+        </div>
+        <br/>
+        <div>
+            <input type="text" v-model="update_weight" :style="{visibility: show_update_info ? 'visible' : 'hidden'}" /> <button type="button" :style="{visibility: show_update_info ? 'visible' : 'hidden'}" @click="update_edge()" v-bind:disabled="update_weight_condition">Update edge</button>
+        </div>
             
     </div>
 </template>
@@ -129,7 +135,7 @@
     //import Title from './components/Title.vue';
     //import PathComponent from './components/PathComponent.vue';
     //import Node from './components/Node.vue';
-    import { Graph, LinkedList, Node, dijkstra, addEdge } from '../src/testGraph.js';
+    import { Graph, LinkedList, Node, dijkstra, addEdge, updateEdge } from '../src/testGraph.js';
 
     //var graph = require('../src/graph.js');
 
@@ -151,9 +157,14 @@
                 have_route: false,
                 have_source: false,
                 have_dest: false,
+                show_update_info: false,
+                src_update: -1,
+                dest_update: -1,
+                update_weight: null,
                 paths: [],
                 route_path: [],
                 line_chosen: [],
+                line_weights: [11,15,14,9,13,2,6,13,4,3,12,10,13,4,10,13,2,7,4,8,8,10,3,13],
                 line_ids: ['0-1', '0-2', '0-3', '1-2', '2-3', '1-4', '1-5', '2-6', '3-7', '3-8', '4-5',
                            '5-6', '6-7', '7-8', '4-9', '5-9', '6-10', '7-11', '8-11', '9-10', '10-11', '9-12', '10-12', '11-12'],
             }
@@ -191,6 +202,22 @@
             addEdge(this.graph, 10, 12, 3);
             addEdge(this.graph, 10, 11, 8);
             addEdge(this.graph, 11, 12, 13);
+        },
+        computed: {
+            update_weight_condition() {
+                console.log("condition wieght");
+                console.log(this.update_weight);
+                console.log(this.update_weight <= 0);
+                if(!this.update_weight)
+                    return false;
+                if (this.update_weight <= 0) {
+                    return false
+                }
+                else {
+                    return null
+                }
+                    
+            }
         },
         methods: {
             get_line(id) {
@@ -270,7 +297,26 @@
                 addEdge(this.graph, 1, 4, 2);
                 let path = dijkstra(this.graph, 0);
                 console.log(path);
+            },
+            show_update(element) {
+                console.log(element.currentTarget.id);
+                this.show_update_info = true;
+                let result = element.currentTarget.id.split("-");
+                this.src_update = result[0];
+                this.dest_update = result[1];
+                //console.log(src + " " + dest);
+            },
+            update_edge() {
+                console.log("update " + this.update_weight);
+                updateEdge(this.graph, this.src_update, this.dest_update, this.update_weight);
+                let id = "" + this.src_update + "-" + this.dest_update;
+                let index = this.line_ids.indexOf(id);
+                this.$set(this.line_weights, index, this.update_weight);
+            },
+            remove_edge() {
+                console.log("removed");
             }
+
         }
     };
 </script>

@@ -57,7 +57,7 @@ function getEdge(graph, source, destination) {
     return -1;
 }
 
-function updateEdge(graph, source, destination, weight) {
+export function updateEdge(graph, source, destination, weight) {
     let temp = graph.adjacencyList[source].head;
     while (temp != null) {
         if (temp.destination == destination) {
