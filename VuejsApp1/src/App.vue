@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        
+        <h1>Group Four's Routing Project</h1>
 
         <svg height="1000" width="1000">
 
@@ -124,6 +126,7 @@
 
 <script>
     import Home from './components/Home.vue';
+    //import Title from './components/Title.vue';
     //import PathComponent from './components/PathComponent.vue';
     //import Node from './components/Node.vue';
     import { Graph, LinkedList, Node, dijkstra, addEdge } from '../src/testGraph.js';

@@ -148,6 +148,22 @@ export function dijkstra(graph, source) {
     return path;
 }
 
+/*
+export function tracePath(parents, source, destination) {
+    let path = [];
+    tracePathRec(path, parents, destination, source);
+    return path;
+}
+
+function tracePathRec(path, parents, node, source) {
+    if (parents[node] == -1) {
+        path.push(node);
+    } else {
+        path.push(parents[node]);
+        tracePathRec(path, parents, parents[node], source);
+    }
+}
+*/
 
 /*
 let g1 = new Graph(4);
