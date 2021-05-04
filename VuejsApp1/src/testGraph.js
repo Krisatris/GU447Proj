@@ -76,7 +76,7 @@ export function updateEdge(graph, source, destination, weight) {
     return false;
 }
 
-function removeEdge(graph, source, destination) {
+export function removeEdge(graph, source, destination) {
     let temp = graph.adjacencyList[source].head;
     let prev = temp;
     while (temp != null) {
