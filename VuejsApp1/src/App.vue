@@ -6,76 +6,76 @@
         <svg height="600" width="1000">
 
             <!--lines-->
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="120" @click="show_update($event)" :style="{visibility: (!this.line_removed[19] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[19]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="120"  :style="{visibility: (!this.line_removed[19] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[19]}}</text>
             <line id="9-10" x1="200" y1="125" x2="300" y2="125" :class="get_line(19) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[19] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="120" @click="show_update($event)" :style="{visibility: (!this.line_removed[20] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[20]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="120"  :style="{visibility: (!this.line_removed[20] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[20]}}</text>
             <line id="10-11-" x1="300" y1="125" x2="400" y2="125" :class="get_line(20) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[20] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="220" @click="show_update($event)" :style="{visibility: (!this.line_removed[11] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[11]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="220"  :style="{visibility: (!this.line_removed[11] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[11]}}</text>
             <line id="5-6" x1="200" y1="225" x2="300" y2="225" :class="get_line(11) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[11] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="150" y="220" @click="show_update($event)" :style="{visibility: (!this.line_removed[10] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[10]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="150" y="220"  :style="{visibility: (!this.line_removed[10] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[10]}}</text>
             <line id="4-5" x1="100" y1="225" x2="200" y2="225" :class="get_line(10) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[10] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="220" @click="show_update($event)" :style="{visibility: (!this.line_removed[12] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[12]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="220"  :style="{visibility: (!this.line_removed[12] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[12]}}</text>
             <line id="6-7" x1="300" y1="225" x2="400" y2="225" :class="get_line(12) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[12] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="220" @click="show_update($event)" :style="{visibility: (!this.line_removed[13] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[13]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="220" :style="{visibility: (!this.line_removed[13] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[13]}}</text>
             <line id="7-8" x1="400" y1="225" x2="500" y2="225" :class="get_line(13) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[13] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="320" @click="show_update($event)" :style="{visibility: (!this.line_removed[3] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[3]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="250" y="320" :style="{visibility: (!this.line_removed[3] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[3]}}</text>
             <line id="1-2" x1="200" y1="325" x2="300" y2="325" :class="get_line(3) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[3] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="320" @click="show_update($event)" :style="{visibility: (!this.line_removed[4] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[4]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="350" y="320"  :style="{visibility: (!this.line_removed[4] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[4]}}</text>
             <line id="2-3" x1="300" y1="325" x2="400" y2="325" :class="get_line(4) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[4] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="80" @click="show_update($event)" :style="{visibility: (!this.line_removed[22] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[22]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="80" :style="{visibility: (!this.line_removed[22] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[22]}}</text>
             <line id="10-12" x1="300" y1="25" x2="300" y2="125" :class="get_line(22) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[22] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="180" @click="show_update($event)" :style="{visibility: (!this.line_removed[16] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[16]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="295" y="180"  :style="{visibility: (!this.line_removed[16] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[16]}}</text>
             <line id="6-10" x1="300" y1="125" x2="300" y2="225" :class="get_line(16) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[16] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="190" y="180" @click="show_update($event)" :style="{visibility: (!this.line_removed[14] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[14]}}</text>
-            <line id="5-9" x1="200" y1="125" x2="200" y2="225" :class="get_line(14) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[14] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="190" y="180"  :style="{visibility: (!this.line_removed[15] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[15]}}</text>
+            <line id="5-9" x1="200" y1="125" x2="200" y2="225" :class="get_line(15) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[15] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="390" y="180" @click="show_update($event)" :style="{visibility: (!this.line_removed[17] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[17]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="390" y="180"  :style="{visibility: (!this.line_removed[17] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[17]}}</text>
             <line id="7-11" x1="400" y1="125" x2="400" y2="225" :class="get_line(17) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[17] ? 'visible' : 'hidden'), 'stroke-width':2}"  @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="395" y="280" @click="show_update($event)" :style="{visibility: (!this.line_removed[8] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[8]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="395" y="280"  :style="{visibility: (!this.line_removed[8] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[8]}}</text>
             <line id="3-7" x1="400" y1="225" x2="400" y2="325" :class="get_line(8) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[8] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="280" @click="show_update($event)" :style="{visibility: (!this.line_removed[7] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[7]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="280" :style="{visibility: (!this.line_removed[7] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[7]}}</text>
             <line id="2-6" x1="300" y1="225" x2="300" y2="325" :class="get_line(7) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[7] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="195" y="280" @click="show_update($event)" :style="{visibility: (!this.line_removed[6] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[6]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="195" y="280"  :style="{visibility: (!this.line_removed[6] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[6]}}</text>
             <line id="1-5" x1="200" y1="225" x2="200" y2="325" :class="get_line(6) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[6] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="380" @click="show_update($event)" :style="{visibility: (!this.line_removed[1] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[1]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="290" y="380" :style="{visibility: (!this.line_removed[1] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[1]}}</text>
             <line id="0-2" x1="300" y1="325" x2="300" y2="425" :class="get_line(1) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[1] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="70" @click="show_update($event)" :style="{visibility: (!this.line_removed[21] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[21]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="70"  :style="{visibility: (!this.line_removed[21] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[21]}}</text>
             <line id="9-12" x1="300" y1="25" x2="200" y2="125" :class="get_line(21) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[21] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="170" @click="show_update($event)" :style="{visibility: (!this.line_removed[14] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[14]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="170"  :style="{visibility: (!this.line_removed[14] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[14]}}</text>
             <line id="4-9" x1="200" y1="125" x2="100" y2="225" :class="get_line(14) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[14] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="290" @click="show_update($event)" :style="{visibility: (!this.line_removed[5] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[5]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="145" y="290"  :style="{visibility: (!this.line_removed[5] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[5]}}</text>
             <line id="1-4" x1="100" y1="225" x2="200" y2="325" :class="get_line(5) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[5] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="390" @click="show_update($event)" :style="{visibility: (!this.line_removed[0] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[0]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="245" y="390"  :style="{visibility: (!this.line_removed[0] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[0]}}</text>
             <line id="0-1" x1="200" y1="325" x2="300" y2="425" :class="get_line(0) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[0] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="390" @click="show_update($event)" :style="{visibility: (!this.line_removed[2] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[2]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="390"  :style="{visibility: (!this.line_removed[2] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[2]}}</text>
             <line id="0-3" x1="300" y1="425" x2="400" y2="325" :class="get_line(2) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[2] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)" />
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="455" y="290" @click="show_update($event)" :style="{visibility: (!this.line_removed[9] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[9]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="455" y="290"  :style="{visibility: (!this.line_removed[9] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[9]}}</text>
             <line id="3-8" x1="400" y1="325" x2="500" y2="225" :class="get_line(9) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[9] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="170" @click="show_update($event)" :style="{visibility: (!this.line_removed[18] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[18]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="450" y="170"  :style="{visibility: (!this.line_removed[18] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[18]}}</text>
             <line id="8-11" x1="500" y1="225" x2="400" y2="125" :class="get_line(18) ? 'red' : 'black'" :style="{visibility: (!this.line_removed[18] ? 'visible' : 'hidden'), 'stroke-width':2}" @click="show_update($event)"/>
 
-            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="70" @click="show_update($event)" :style="{visibility: (!this.line_removed[23] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[23]}}</text>
+            <text fill="#ffhwff" font-size="12" font-family="Verdana" x="355" y="70"  :style="{visibility: (!this.line_removed[23] ? 'visible' : 'hidden')}" text-anchor="middle">{{this.line_weights[23]}}</text>
             <line id="11-12" x1="400" y1="125" x2="300" y2="25" :class="get_line(23) ? 'red' : 'black'"  :style="{visibility: (!this.line_removed[23] ? 'visible' : 'hidden'), 'stroke-width':2}"  @click="show_update($event)" />
 
             <!--Nodes-->
@@ -119,6 +119,9 @@
             <text id="0" fill="#white" font-size="20" font-family="Verdana" x="300" y="425" text-anchor="middle" dy=".3em" @click="set_route($event)">0</text>
         </svg>
 
+        <div>
+            <button type="button" @click="reset()"> Reset src and dest</button>
+        </div>
         <div>
             <button type="button" :style="{visibility: show_update_info ? 'visible' : 'hidden'}" @click="remove_edge()">Remove edge</button>
         </div>
@@ -228,6 +231,17 @@
                 console.log(id + " " + this.line_chosen[id]);
                 return this.line_chosen[id];
             },
+            reset() {
+            /* eslint-disable no-console */
+                console.log("reset");
+                for (let i = 0; i < 24; ++i) {
+                    this.$set(this.line_chosen, i, false)
+                } 
+                this.have_source = false;
+                this.have_dest = false;
+                this.have_route = false;
+
+            },
             get_route: function () {
                 this.paths = dijkstra(this.graph, this.source);
                 this.route_path = this.tracePath(this.paths, this.source, this.dest);
@@ -311,7 +325,8 @@
             },
             update_edge() {
                 console.log("update " + this.update_weight);
-                updateEdge(this.graph, this.src_update, this.dest_update, this.update_weight);
+                let weight = parseInt(this.update_weight);
+                updateEdge(this.graph, this.src_update, this.dest_update, weight);
                 let id = "" + this.src_update + "-" + this.dest_update;
                 let index = this.line_ids.indexOf(id);
                 this.$set(this.line_weights, index, this.update_weight);
